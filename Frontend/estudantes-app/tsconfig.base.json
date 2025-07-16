@@ -1,0 +1,26 @@
+/* Este arquivo contém as configurações TypeScript básicas para o seu projeto Angular */
+{
+  "compilerOptions": {
+    "baseUrl": "./", // Define a base para resolução de módulos
+    "outDir": "./dist/out-tsc", // Onde o TypeScript vai gerar os arquivos compilados
+    "forceConsistentCasingInFileNames": true, // Garante que os nomes de arquivo usem a mesma caixa
+    "strict": true, // Habilita um conjunto de verificações de tipo rigorosas (boa prática)
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true, // Gera arquivos .map para depuração
+    "declaration": false, // Não gera arquivos .d.ts para bibliotecas (não precisa para app)
+    "downlevelIteration": true, // Ajuda com a compatibilidade para loops em ES5
+    "experimentalDecorators": true, // Necessário para Angular (@Component, @Injectable)
+    "moduleResolution": "node", // Como o TypeScript resolve os módulos (como o Node.js)
+    "importHelpers": true, // Reduz o tamanho do código gerado
+    "target": "ES2022", // A versão do JavaScript de saída
+    "module": "ES2022", // O formato do módulo (moderno)
+    "useDefineForClassFields": false, // Configuração para campos de classe (padrão Angular)
+    "lib": [ // Bibliotecas padrão que o compilador deve incluir
+      "ES2022",
+      "dom"
+    ]
+  }
+}
