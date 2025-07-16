@@ -1,0 +1,10 @@
+1 - pergunta sobre o Dapper
+
+p: como configurar o Dapper na minha aplicação no visual Studio Community ? projeto de API Web ASP.NET Core
+Seja claro, objetivo e me faça pensar e entender o que está sendo feito e o porque. Preciso lembrar de alguns pontos chaves.
+
+
+o que aprendi e como fiz:
+
+Eu aprendi a configurar o Dapper na minha API ASP.NET Core entendendo cada etapa de forma prática. Instalei o pacote via NuGet, configurei a conexão com o banco usando IDbConnection, e defini a string de conexão no appsettings.json. Também entendi como aplicar a injeção de dependência pra usar meu repositório nos controllers.
+O Dapper funciona direto com SQL, sem abstrações complicadas, o que me deu mais controle e simplicidade no acesso aos dados.
