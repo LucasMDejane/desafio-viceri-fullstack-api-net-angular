@@ -6,10 +6,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
-    
 
-builder.Services.AddEndpointsApiExplorer(); 
-builder.Services.AddSwaggerGen();          
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "EstudantesApi", Version = "v1" });
+
+});
 
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
