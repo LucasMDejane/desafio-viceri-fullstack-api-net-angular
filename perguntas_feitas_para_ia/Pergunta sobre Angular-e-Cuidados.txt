@@ -8,4 +8,4 @@ Sei a teoria de Angular, mas será minha primeira vez na prática lidando com es
 
 resposta da IA de forma resumida e o que eu aprendi:
 
-Escolhi Angular pro front-end e fiz a configuração usando Node.js. Consegui preparar tudo que precisava e estou focando nos pontos principais: organização por módulos, uso do Angular CLI, estrutura de componentes e serviços, e o roteamento. É minha primeira experiência prática com Angular, então estou descobrindo na prática como ele funciona e como se diferencia de outros frameworks.
+Escolhi Angular pro front-end e fiz a configuração usando Node.js. Consegui preparar tudo que precisava e estou focando nos pontos principais: organização por módulos, uso do Angular CLI, estrutura de componentes e serviços, e o roteamento. É minha primeira experiência prática com Angular, então estou descobrindo na prática como ele funciona e como se diferencia de outros frameworks..
