@@ -1,0 +1,11 @@
+Pergunta sobre quais eram as ferramentas importantes e configurações importantes para utilizar o framework Angular, já que nunca havia baixado nada dele.
+
+p: Parte 3 – Front-End Angular ou React (Opcional)
+
+cheguei nesse passo de um desafio que estou fazendo. Preciso saber a que pontos devo me atentar e o que devo instalar no meu computador, sabendo que minha escolha foi angular. Além disso, para contextualizar, estou usando o Visual Studio Community 2022.
+Sei a teoria de Angular, mas será minha primeira vez na prática lidando com este framework, se puder me dar alguns toques de atenção e com quais outros frameworks ele se parece.
+
+
+resposta da IA de forma resumida e o que eu aprendi:
+
+Escolhi Angular pro front-end e fiz a configuração usando Node.js. Consegui preparar tudo que precisava e estou focando nos pontos principais: organização por módulos, uso do Angular CLI, estrutura de componentes e serviços, e o roteamento. É minha primeira experiência prática com Angular, então estou descobrindo na prática como ele funciona e como se diferencia de outros frameworks.

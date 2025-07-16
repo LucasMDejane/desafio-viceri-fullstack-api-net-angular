@@ -21,6 +21,14 @@ builder.Services.AddTransient<IDbConnection>(sp => new SqlConnection(connectionS
 
 builder.Services.AddScoped<EstudantesService>(); // LINHA PARA REGISTRAR SERVIÇO
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", // Nome da sua política de CORS
+        policyBuilder => policyBuilder.WithOrigins("http://localhost:4200") // <--- MUITO IMPORTANTE: A URL do seu Angular (padrão)
+                           .AllowAnyHeader()    // Permite qualquer cabeçalho na requisição
+                           .AllowAnyMethod());  // Permite qualquer método HTTP (POST, GET, etc.)
+});
+
 var app = builder.Build(); 
 
 if (app.Environment.IsDevelopment())
@@ -30,6 +38,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowSpecificOrigin");
 app.UseAuthorization();
 
 app.MapControllers();
