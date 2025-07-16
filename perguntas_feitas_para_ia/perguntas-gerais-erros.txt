@@ -1,0 +1,17 @@
+Durante o desenvolvimento do desafio, tive dúvidas pontuais e usei a IA pra acelerar algumas etapas e entender melhor o que estava acontecendo. Aqui estão as perguntas que fiz e como elas me ajudaram:
+
+
+- Como conectar ASP.NET Core usando Dapper
+A IA me mostrou um trecho de código para o Program.cs e explicou como instalar os pacotes necessários (Dapper e System.Data.SqlClient). Isso me ajudou a estruturar a camada de acesso a dados e entender o fluxo de conexão.
+
+- Erro “Cannot find module '@angular/forms'” em componente standalone
+Me orientou a importar o FormsModule diretamente no array imports do decorator @Component. Isso corrigiu o problema com o [(ngModel)], que não estava sendo reconhecido.
+
+- Erro “Maximum call stack size exceeded” com tsconfig.json
+A IA explicou que era um loop de herança nos arquivos de configuração. Recebi o conteúdo correto para o tsconfig.json e tsconfig.app.json, e consegui compilar o front-end sem travar, depois de resolvido fui entender o que havia acontecido e entendi que foi um erro de estar lendo uma documentação um pouco desatualizada.
+
+- Botão “Adicionar Nota” não funciona
+Descobri que o CommonModule precisava ser importado nos componentes standalone para que o *ngFor funcionasse corretamente. Isso resolveu a renderização dinâmica do formulário.
+
+- Erro de CORS “No Access-Control-Allow-Origin”
+A IA deu uma dica de como configurar builder.Services.AddCors e app.UseCors no Program.cs do back-end. Depois disso, o front-end conseguiu se comunicar com a API sem bloqueios.
