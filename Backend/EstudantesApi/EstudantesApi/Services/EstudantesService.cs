@@ -1,4 +1,4 @@
-﻿using System.Data; // Para IDbConnection
+﻿using System.Data; 
 using Dapper;
 using System.Data.SqlClient;
 using EstudantesApi.Models;
@@ -13,12 +13,12 @@ namespace EstudantesApi.Services
 
         public EstudantesService(IDbConnection dbConnection)
         {
-            _dbConnection = dbConnection; // Armazena a conexão injetada
+            _dbConnection = dbConnection; // armazena a conexão injetada
         }
 
         public async Task<(bool Success, string Message)> CadastrarEstudanteComNotas(EstudanteCadastroViewModel model)
         {
-            // (Regras de Negócio)
+            // regras de Negócio
 
             if (string.IsNullOrWhiteSpace(model.Nome))
             {
@@ -38,7 +38,7 @@ namespace EstudantesApi.Services
 
             try
             {
-                // 2. Inserrt
+                // inserrt
               
                 var sqlInsertEstudante = "INSERT INTO Estudantes (Nome, Idade) VALUES (@Nome, @Idade); SELECT SCOPE_IDENTITY();";
                 //executa e retorna o primeiro valor da primeira linha, o ID 

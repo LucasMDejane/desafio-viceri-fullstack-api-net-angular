@@ -1,36 +1,33 @@
-/* Arquivo de configuração base para o projeto TypeScript/Angular */
 {
-  // ESTENDE A CONFIGURAÇÃO BASE DO ANGULAR CLI (DENTRO DE NODE_MODULES)
   "extends": "./tsconfig.base.json",
-
   "compilerOptions": {
-    "outDir": "./out-tsc", // Pasta de saída para arquivos compilados
-    "strict": true, // Modo estrito de TypeScript (boa prática)
+    "outDir": "./out-tsc",
+    "strict": true, // ativa checagens estritas de tipo
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true, // Pula a verificação de tipo das bibliotecas (útil)
-    "isolatedModules": true, // Garante que cada arquivo é um módulo independente
-    "experimentalDecorators": true, // Necessário para Angular (decorators como @Component)
-    "importHelpers": true, // Ajuda a reduzir o tamanho do código gerado
-    "target": "es2022", // Versão do JavaScript de saída
-    "module": "es2022", // Formato de módulo de saída
-    "moduleResolution": "node", // Como o TypeScript resolve módulos (Node.js-style)
-    "lib": [ // Bibliotecas padrão disponíveis para o código
+    "skipLibCheck": true, // pula verificação de tipos em libs de terceiros
+    "isolatedModules": true,
+    "experimentalDecorators": true, // necessário para angular
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "node",
+    "lib": [
       "es2022",
       "dom"
     ]
   },
   "files": [],
   "include": [
-    "src/**/*.d.ts", // Inclui arquivos de definição de tipo
-    "src/**/*.ts" // Inclui todos os arquivos TypeScript na pasta src
+    "src/**/*.d.ts",
+    "src/**/*.ts" // inclui todos os arquivos .ts da pasta src
   ],
   "exclude": [
-    "src/**/*.spec.ts" // Exclui arquivos de teste
+    "src/**/*.spec.ts" // exclui arquivos de teste
   ],
-  "references": [ // Referências a outros arquivos tsconfig
+  "references": [ // referências a outros arquivos tsconfig do projeto
     {
       "path": "./tsconfig.app.json"
     },

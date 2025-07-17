@@ -1,10 +1,10 @@
-// src/app/cadastro-estudante/cadastro-estudante.component.ts
+
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Necessário para [(ngModel)]
-import { HttpClient } from '@angular/common/http'; // <-- Manter este import
+import { FormsModule } from '@angular/forms'; 
+import { HttpClient } from '@angular/common/http'; 
 import { CommonModule } from '@angular/common';
 
-// --- Definição de Tipos (Interfaces) ---
+
 interface EstudanteData {
   nome: string;
   idade: number | null;
@@ -15,7 +15,7 @@ interface NotaData {
   disciplina: string;
   nota: number | null;
 }
-// --- Fim da Definição de Tipos ---
+
 
 
 @Component({
@@ -34,14 +34,14 @@ export class CadastroEstudanteComponent {
     nome: '',
     idade: null,
     notas: [
-      { disciplina: '', nota: null } // Uma nota vazia inicial
+      { disciplina: '', nota: null } // nota vazia inicial
     ]
   };
 
-  // Injeta o HttpClient no construtor
-  constructor(private http: HttpClient) { } // Manter este construtor
+  // injeta o HttpClient no construtor
+  constructor(private http: HttpClient) { } 
 
-  // --- Métodos de Lógica para o Formulário ---
+  // lógica 
 
   adicionarNota(): void {
     this.estudante.notas.push({ disciplina: '', nota: null });
@@ -58,7 +58,6 @@ export class CadastroEstudanteComponent {
   }
 
   salvarEstudante(): void {
-    // --- Validações Locais Simples ---
     if (!this.estudante.nome || this.estudante.nome.trim() === '') {
       alert('Por favor, preencha o nome do estudante.');
       return;
@@ -77,12 +76,10 @@ export class CadastroEstudanteComponent {
         return;
       }
     }
-    // --- Fim das Validações Locais ---
 
     console.log('Enviando dados para a API:', this.estudante);
 
-    // A URL da sua API (confirme a porta do seu Back-End ao rodá-lo)
-    const apiUrl = 'https://localhost:7249/api/Estudantes'; 
+    const apiUrl = 'https://localhost:7249/api/Estudantes'; //url porta
 
     this.http.post(apiUrl, this.estudante).subscribe({
       next: (response: any) => {

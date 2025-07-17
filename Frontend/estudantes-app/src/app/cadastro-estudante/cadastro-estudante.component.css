@@ -1,97 +1,92 @@
-/* Estilos gerais para o corpo do componente (o formulário todo) */
 :host {
-  display: block; /* Faz o componente ocupar toda a largura disponível */
-  max-width: 500px; /* Limita a largura máxima do formulário */
-  margin: 30px auto; /* Centraliza o formulário na página */
+  display: block;
+  max-width: 500px;
+  margin: 30px auto;
   padding: 20px;
-  border: 1px solid #c0c0c0; /* Borda cinza clara */
-  border-radius: 5px; /* Cantos levemente arredondados */
-  background-color: #f0f0f0; /* Fundo cinza bem clarinho */
-  font-family: Arial, sans-serif; /* Fonte simples */
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-family: arial, sans-serif;
 }
 
 h2 {
-  text-align: center; /* Centraliza o título */
-  color: #333; /* Cor do texto mais escura */
-  margin-bottom: 20px; /* Espaço abaixo do título */
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Estilo para cada grupo de label/input (Nome, Idade) */
 div {
-  margin-bottom: 15px; /* Espaço entre os campos */
+  margin-bottom: 15px;
 }
 
 label {
-  display: block; /* Faz o label ficar em uma linha própria */
-  margin-bottom: 5px; /* Espaço abaixo do label */
+  display: block;
+  margin-bottom: 5px;
   color: #555;
-  font-weight: bold; /* Texto em negrito */
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="number"] {
-  width: calc(100% - 20px); /* Ocupa quase 100% da largura, descontando o padding */
-  padding: 8px 10px; /* Espaçamento interno */
-  border: 1px solid #b0b0b0; /* Borda cinza */
-  border-radius: 3px; /* Cantos levemente arredondados */
-  box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
-  font-size: 1em; /* Tamanho de fonte padrão */
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #b0b0b0;
+  border-radius: 3px;
+  box-sizing: border-box; /* padding e borda não somam à largura total */
+  font-size: 1em;
 }
 
-/* Estilos para a seção de notas */
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
   color: #333;
-  border-bottom: 1px solid #ddd; /* Linha fina abaixo do título "Notas" */
+  border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
 }
 
 .nota-group {
-  border: 1px dashed #a0a0a0; /* Borda tracejada para separar cada grupo de nota */
+  border: 1px dashed #a0a0a0;
   padding: 10px;
   margin-bottom: 15px;
-  background-color: #e0e0f0; /* Um azul bem clarinho para o fundo da nota */
+  background-color: #e0e0f0;
   border-radius: 4px;
 }
 
-  .nota-group div { /* Para os divs internos dentro de cada grupo de nota */
-    margin-bottom: 10px; /* Espaço entre os campos de disciplina e nota */
+  .nota-group div {
+    margin-bottom: 10px;
   }
 
   .nota-group input {
-    width: calc(100% - 20px); /* Ajuste de largura para inputs dentro do grupo de nota */
+    width: calc(100% - 20px);
   }
 
-/* Estilos para os botões */
 button {
-  background-color: #007bff; /* Azul padrão */
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
-  border: none; /* Sem borda */
-  border-radius: 4px; /* Cantos arredondados */
-  cursor: pointer; /* Muda o cursor para uma "mão" */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   font-size: 1em;
-  margin-right: 10px; /* Espaço à direita para separar botões */
+  margin-right: 10px;
 }
 
   button:hover {
-    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    background-color: #0056b3;
   }
 
-  /* Estilo específico para o botão de remover nota */
-  button.remover-nota { /* Usando a classe que você adicionou no HTML */
-    background-color: #dc3545; /* Vermelho */
-    margin-top: 10px; /* Espaço acima do botão */
-    display: block; /* Faz o botão ocupar a linha toda para ficar abaixo dos campos */
-    width: 100%; /* Ocupa toda a largura */
+  button.remover-nota {
+    background-color: #dc3545;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
   }
 
     button.remover-nota:hover {
-      background-color: #c82333; /* Vermelho mais escuro */
+      background-color: #c82333;
     }
 
-/* Ajuste para o botão "Adicionar Nota" e "Salvar Estudante" */
-form > button { /* Seleciona os botões que são filhos diretos do form */
-  margin-top: 20px; /* Espaço acima desses botões */
+/* seleciona botões que são filhos diretos do form */
+form > button {
+  margin-top: 20px;
 }

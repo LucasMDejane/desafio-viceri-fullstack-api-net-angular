@@ -19,14 +19,14 @@ builder.Services.AddSwaggerGen(c =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddTransient<IDbConnection>(sp => new SqlConnection(connectionString));
 
-builder.Services.AddScoped<EstudantesService>(); // LINHA PARA REGISTRAR SERVIÇO
+builder.Services.AddScoped<EstudantesService>(); 
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin", // Nome da sua política de CORS
-        policyBuilder => policyBuilder.WithOrigins("http://localhost:4200") // <--- MUITO IMPORTANTE: A URL do seu Angular (padrão)
-                           .AllowAnyHeader()    // Permite qualquer cabeçalho na requisição
-                           .AllowAnyMethod());  // Permite qualquer método HTTP (POST, GET, etc.)
+    options.AddPolicy("AllowSpecificOrigin", 
+        policyBuilder => policyBuilder.WithOrigins("http://localhost:4200") 
+                           .AllowAnyHeader()   
+                           .AllowAnyMethod()); 
 });
 
 var app = builder.Build(); 
